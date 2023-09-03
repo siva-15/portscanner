@@ -1,0 +1,13 @@
+import socket
+s=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+host=""#target host
+port=443
+
+def portScan(port):
+    if s.connect_ex((host,port)):
+        print("port is closed")
+        
+    else:
+        print("port is open")
+        
+portScan(port)        
